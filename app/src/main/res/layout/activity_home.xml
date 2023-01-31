@@ -138,10 +138,11 @@
 
             <TextView
                 app:layout_constraintVertical_chainStyle="packed"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/_27"
-                android:textSize="60sp"
+                android:textSize="56sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:id="@+id/wfNumber"
@@ -150,12 +151,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/wfSubLabel"
                 tools:ignore="MissingConstraints"
-
+                android:maxLines="1"
                 />
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:maxLines="1"
                 android:layout_height="wrap_content"
                 android:text="@string/feels_like_32"
                 android:textColor="@color/white"
@@ -177,6 +180,7 @@
                 app:layout_constraintTop_toBottomOf="@id/wfSubLabel"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_chainStyle="packed"
+                android:scaleType="centerInside"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -272,23 +276,10 @@
         android:layout_marginTop="20dp"
         android:text="@string/devices"
         android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/energy" />
-
-    <TextView
-        android:id="@+id/deviceLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="@string/_25"
-        android:textColor="@color/text_secondary"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/devices"
-        app:layout_constraintStart_toEndOf="@id/devices"
-        app:layout_constraintTop_toBottomOf="@id/devices"
-        app:layout_constraintTop_toTopOf="@id/devices" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/deviceListRecyclarView"

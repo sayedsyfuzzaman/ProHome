@@ -1,7 +1,13 @@
 package com.syfuzzaman.prohome
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -33,5 +39,19 @@ class HomeActivity : AppCompatActivity() {
 
         deviceAdapter = DeviceAdapters(deviceList)
         recyclerView.adapter = deviceAdapter
+
+        var wfNumberTextView: TextView = findViewById(R.id.wfNumber)
+        wfNumberTextView.setText(Html.fromHtml("27<sup><small>o</small></sup>"))
+
+        val deviceInfo:TextView = findViewById(R.id.devices)
+        val spannable = SpannableString("Devices (25)")
+        spannable.setSpan(
+            ForegroundColorSpan(Color.GRAY),
+            8, // start
+            12, // end
+            Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+        )
+        deviceInfo.text = spannable
     }
+
 }
