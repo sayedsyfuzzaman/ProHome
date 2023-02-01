@@ -94,7 +94,7 @@
 
             <ImageView
                 android:id="@+id/weatherIcon"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:src="@drawable/ic_thunderstorm"
                 app:layout_constraintStart_toStartOf="parent"
