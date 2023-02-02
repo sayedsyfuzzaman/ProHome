@@ -11,4 +11,7 @@
     <string name="devices">Devices</string>
     <string name="light">Light</string>
     <string name="x3_devices">x3 Devices</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment_1">Hello fragment 1</string>
+    <string name="fragment_2">Hello fragment 2</string>
 </resources>

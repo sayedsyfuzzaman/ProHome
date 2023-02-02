@@ -12,7 +12,7 @@
         android:theme="@style/Theme.ProHome"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/FullScreen">
             <intent-filter>
